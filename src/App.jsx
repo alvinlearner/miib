@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Landing from './Landing'
 import { Routes, Route } from "react-router-dom";
 import Aboutpage from './components/about/Aboutpage';
+import ContactUs from './Pages/contactus/Contact';
 
 
 import Navbar2 from './components/Navbar/Navbar2';
@@ -17,6 +18,7 @@ function App() {
     <Navbar/>
     <Routes>
     <Route path="/" element={<Landing />} />
+    <Route path="/contactus" element={<ContactUs />} />
     <Route path="/about" element={<Aboutpage />} />
     </Routes>
     {/* <Footer/> */}

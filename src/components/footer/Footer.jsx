@@ -5,6 +5,7 @@ import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg
 import './footer.css'
 import { IoMdPhonePortrait, IoIosMail} from 'react-icons/io';
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -14,6 +15,9 @@ const Footer = () => {
       behavior: "smooth"
     });
   };
+
+const navigate = useNavigate()
+
 
 
   const phoneNumber = ' +254 722 722 388'
@@ -27,9 +31,9 @@ const Footer = () => {
 
 
 {/* QUICK NAV TO CONTACT FORM */}
-<div class='py-9 bg-gray-100 flex justify-between items-center px-9'>
-  <h1 class='text-left font-bold text-3xl text-gray-900'>GOT A QUESTION? SEND US AN EMAIL</h1>
-  <button class='bg-yellow-400 py-3 px-2 text-white text-3xl rounded hover:bg-yellow-300'>GET STARTED NOW</button>
+<div className='py-9 bg-gray-100 flex justify-between items-center px-9'>
+  <h1 className='text-left font-bold text-3xl text-gray-900'>GOT A QUESTION? SEND US AN EMAIL</h1>
+  <button className='bg-yellow-400 py-3 px-2 text-white text-3xl rounded hover:bg-yellow-300'  onClick={() => navigate('/contactus')} scrollToTop >GET STARTED NOW</button>
 </div>
 
 
@@ -76,15 +80,15 @@ const Footer = () => {
             <li className="mb-2">
               <a  className="text-md text-black hover:text-blue-800">
               <Link to="/about" onClick={scrollToTop}>
-                FAQs
+                About
                 </Link>
               </a>
               
             </li>
             <li className="mb-2">
-              <a href="#contact" className="text-md text-black hover:text-blue-800">
+            <Link to="/contactus" onClick={scrollToTop}>
                 Contact
-              </a>
+                </Link>
             </li>
           </ul>
         </div>

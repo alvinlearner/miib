@@ -1,5 +1,5 @@
 .pricing-card {
-  width: 300px; /* Set a fixed width for the pricing cards */
+  width: 250px; /* Set a fixed width for the pricing cards */
   margin: 0 10px; /* Add margin for spacing */
   background-color: #fff;
   padding: 20px;
@@ -55,4 +55,10 @@
   .pricing-card:last-child {
     margin-bottom: 0; /* Remove margin from the last card in tablet mode */
   }
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px); /* Move the card 5px up on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adjust box shadow for hover effect */
+  
 }

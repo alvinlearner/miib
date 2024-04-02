@@ -4,7 +4,7 @@ import Close from '../../assets/close.svg'
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 import Logo from './logo2.png'
-import { IoIosHome, IoIosContact, IoIosPricetag, IoIosInformationCircleOutline, IoIosImages } from 'react-icons/io';
+import { IoIosHome, IoIosContact, IoIosPricetag, IoIosInformationCircleOutline } from 'react-icons/io';
 import './navbar.css'
 
 const Navbar = () => {
@@ -14,6 +14,9 @@ const Navbar = () => {
     setToggle(!toggle);
   };
 
+  const handleCloseMenu = () => {
+    setToggle(false); // 
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -49,22 +52,17 @@ const Navbar = () => {
                   <span>About</span>
                 </Link>
               </li>
+
               <li>
-                <Link to="/suites" onClick={scrollToTop} className="flex items-center hover:text-blue-800">
-                  <IoIosImages className="text-2xl mr-1" />
-                  <span>Gallery</span>
+                <Link to="contactus" className="flex items-center hover:text-blue-800">
+                  <IoIosContact className="text-2xl mr-1" />
+                  <span>Contact Us</span>
                 </Link>
               </li>
               <li>
-                <a href="#contactus" className="flex items-center hover:text-blue-800">
-                  <IoIosContact className="text-2xl mr-1" />
-                  <span>Contact Us</span>
-                </a>
-              </li>
-              <li>
                 <a href="#pricing" className="flex items-center hover:text-blue-800">
-                  <IoIosPricetag className="text-2xl mr-1" />
-                  <span>Pricing</span>
+                  <IoIosInformationCircleOutline className="text-2xl mr-1" />
+                  <span>FAQs</span>
                 </a>
               </li>
             </ul>
@@ -87,33 +85,27 @@ const Navbar = () => {
             className={toggle ? 'absolute z-50 p-4 bg-white w-full px-8 md:hidden' : 'hidden'}
           >
             <li>
-              <Link to="/" className="flex items-center mb-4 hover:text-blue-800">
+              <Link to="/" className="flex items-center mb-4 hover:text-blue-800 " onClick={handleCloseMenu}>
                 <IoIosHome className="text-2xl mr-1" />
                 <span>Home</span>
               </Link>
             </li>
             <li>
-              <Link to="/about" className="flex items-center mb-4 hover:text-blue-800">
+              <Link to="/about" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
                 <IoIosInformationCircleOutline className="text-2xl mr-1" />
                 <span>About</span>
               </Link>
             </li>
             <li>
-              <Link to="/suites" className="flex items-center mb-4 hover:text-blue-800">
-                <IoIosImages className="text-2xl mr-1" />
-                <span>Gallery</span>
+            <Link to="/contactus" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
+                <IoIosContact className="text-2xl mr-1" />
+                <span>Contact Us</span>
               </Link>
             </li>
             <li>
-              <a href="#contactus" className="flex items-center mb-4 hover:text-blue-800">
-                <IoIosContact className="text-2xl mr-1" />
-                <span>Contact Us</span>
-              </a>
-            </li>
-            <li>
-              <a href="#pricing" className="flex items-center mb-4 hover:text-blue-800">
-                <IoIosPricetag className="text-2xl mr-1" />
-                <span>Pricing</span>
+              <a href="#pricing" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
+                <IoIosInformationCircleOutline className="text-2xl mr-1" />
+                <span>FAQs</span>
               </a>
             </li>
           </motion.ul>
