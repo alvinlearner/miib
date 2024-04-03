@@ -4,6 +4,7 @@ import Swal from 'sweetalert2';
 import ContactFooter from "../../components/footer/ContactFooter";
 import phone from "./cont.jpg"
 import ReCAPTCHA from "react-google-recaptcha";
+import 'animate.css';
 
 export default function ContactUs() {
   const form = useRef();
@@ -60,16 +61,22 @@ export default function ContactUs() {
 
   return (
     <>
-      <div className="py-9 bg-gray-100 flex justify-between items-center px-9 sm:flex-row flex-wrap lg:flex-nowrap gap-3">
-        <div>
+      <div className="container mx-auto py-7 md:px-0 bg-gray-100">
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+
+      <div >
           <h1 className="text-4xl bold text-blue-500 text-center ">Reach out to us today.</h1>
           <img src={phone} alt="" style={dropShadowStyle} />
           <p className="text-xl">We'd love to hear from you! Have a question or want to chat? Drop us a line and we'll get in touch soon.</p>
-        </div>
+      </div>
 
-        <div className="max-w-md w-full px-4 py-8 bg-white rounded-lg shadow-lg">
+
+
+
+        <div className="max-w-md w-full px-4 py-4 bg-white rounded-lg shadow-lg  animate__animated animate__fadeInRight animate__delay-0.5s">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
-
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
               <label htmlFor="name" className="font-bold block text-sm font-medium text-gray-700">
@@ -134,6 +141,7 @@ export default function ContactUs() {
             </button>
           </form>
         </div>
+      </div>
       </div>
       <ContactFooter/>
     </>

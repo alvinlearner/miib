@@ -41,17 +41,20 @@ const MainHeroSection = () => {
           </div>
         ))}
       </Slider>
-      {/* <div className="hero-content">
+      <div className="hero-content">
         <h1 className="catchy-headline calligraphy">
-          Your Dream Stay Awaits at <span>WestNile Resort</span>
+        Welcome to <span>MIB</span>
         </h1>
-        <p className="subheadline fancy-text">
-          Experience luxury and comfort like never before. Visit us today.
-        </p>
+        <p className="subheadline ">
+        Protecting what matters most.
+        Explore our insurance solutions for peace of mind and financial security. Get a quote and start securing your future today.</p>
         <a onClick={() => navigate('/suites')} className="btn-book-now" style={{cursor:'pointer'}}>
           Explore
         </a>
-      </div> */}
+      </div>
+
+
+
     </div>
     </>
   );
