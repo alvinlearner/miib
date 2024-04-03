@@ -250,7 +250,7 @@ Violet: HEX: #ee82ee, RGB: (238, 130, 238). */}
             <a href="#" className="mr-4" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faTwitter} className="text-black text-3xl hover:text-blue-800" />
             </a>
-            <a href="#" className="mr-4" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/mib.ltd/" className="mr-4" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} className="text-black text-3xl hover:text-red-500" />
             </a>
 

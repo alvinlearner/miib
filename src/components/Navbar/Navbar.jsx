@@ -60,10 +60,10 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a href="#pricing" className="flex items-center hover:text-blue-800">
+                <Link to='faqs' className="flex items-center hover:text-blue-800">
                   <IoIosInformationCircleOutline className="text-2xl mr-1" />
                   <span>FAQs</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -103,10 +103,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a href="#pricing" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
+              <Link to='faqs' className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
                 <IoIosInformationCircleOutline className="text-2xl mr-1" />
                 <span>FAQs</span>
-              </a>
+              </Link>
             </li>
           </motion.ul>
         </div>
