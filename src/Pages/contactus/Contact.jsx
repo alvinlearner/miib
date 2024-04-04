@@ -75,7 +75,7 @@ export default function ContactUs() {
 
 
 
-        <div className="max-w-md w-full px-4 py-4 bg-white rounded-lg shadow-lg  animate__animated animate__fadeInRight animate__delay-0.5s">
+        <div className="max-w-md w-full px-4 py-4 bg-white rounded-lg shadow-lg  animate__animated animate__fadeInRight animate__delay-0.2s">
           <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
