@@ -1,9 +1,9 @@
 
 const data = [
     {
-      question: 'Millennium Insurance Brokers (MIB) LTD',
+      question: 'Millenium Insurance Brokers (MIB) LTD',
       answer:
-        'Millennium Insurance Brokers (MIB) LTD is an insurance intermediary providing insurance broking service to individuals, corporates, missions, and organization clientele.',
+        'Millenium Insurance Brokers (MIB) LTD is an insurance intermediary providing insurance broking service to individuals, corporates, missions, and organization clientele.',
     },
     {
       question: 'Where are you located?',

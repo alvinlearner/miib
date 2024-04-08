@@ -62,27 +62,35 @@ const navigate = useNavigate()
           <ul className="list-none p-0 m-0">
             <li className="mb-2">
            
-              <a href="#hero" className="text-md text-black hover:text-blue-800 ">
-              <Link to="/" onClick={scrollToTop}>
+
+              <Link to="/" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
                 Home
                 </Link>
-              </a>
+
              
             </li>
             <li className="mb-2">
-              <a className="text-md text-black hover:text-blue-800">
-              <Link to="/suites" onClick={scrollToTop}>
-                Products
+
+              <Link to="/personal" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
+                Personal
                 </Link>
-              </a>
-              
+
             </li>
+
+
             <li className="mb-2">
-              <a  className="text-md text-black hover:text-blue-800">
-              <Link to="/about" onClick={scrollToTop}>
+              <Link to="/corporate" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
+               Corporate
+                </Link>
+
+            </li>        
+
+            <li className="mb-2">
+
+              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
                 About
                 </Link>
-              </a>
+
               
             </li>
             <li className="mb-2">
@@ -99,45 +107,36 @@ const navigate = useNavigate()
          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-4">
         <h1 className="text-black text-2xl font-bold mb-4 text-blue-500">Product & Services</h1>
           <ul className="list-none p-0 m-0">
+
             <li className="mb-2">
-           
-              <a href="#hero" className="text-md text-black hover:text-blue-800 ">
-              <Link to="/" onClick={scrollToTop}>
+              <Link to="/" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Individual
-                </Link>
-              </a>
-             
+                </Link>             
             </li>
+
+
             <li className="mb-2">
-              <a className="text-md text-black hover:text-blue-800">
-              <Link to="/suites" onClick={scrollToTop}>
+              <Link to="/suites" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Domestic Package
-                </Link>
-              </a>              
+                </Link>        
             </li>
 
             <li className="mb-2">
-              <a  className="text-md text-black hover:text-blue-800">
-              <Link to="/about" onClick={scrollToTop}>
+              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Motor Insurance
-                </Link>
-              </a>              
+                </Link>          
             </li>
 
             <li className="mb-2">
-              <a  className="text-md text-black hover:text-blue-800">
-              <Link to="/about" onClick={scrollToTop}>
+              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Personal Accident
-                </Link>
-              </a>              
+                </Link>           
             </li>
 
             <li className="mb-2">
-              <a  className="text-md text-black hover:text-blue-800">
-              <Link to="/about" onClick={scrollToTop}>
+              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Travel Insurance
-                </Link>
-              </a>              
+                </Link>    
             </li>
 
             <li className="mb-2">

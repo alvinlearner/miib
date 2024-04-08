@@ -4,7 +4,7 @@ import Close from '../../assets/close.svg'
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 import Logo from './logo2.png'
-import { IoIosHome, IoIosContact, IoIosPricetag, IoIosInformationCircleOutline } from 'react-icons/io';
+import { IoIosHome,  IoMdMail, IoMdBusiness, IoIosInformationCircleOutline, IoIosPerson } from 'react-icons/io';
 import './navbar.css'
 
 const Navbar = () => {
@@ -53,9 +53,29 @@ const Navbar = () => {
                 </Link>
               </li>
 
+
+
+              <li>
+                <Link to="/personal" onClick={scrollToTop} className="flex items-center hover:text-blue-800">
+                  <IoIosPerson className="text-2xl mr-1" />
+                  <span>Personal</span>
+                </Link>
+              </li>
+
+
+
+              <li>
+                <Link to="/corporate" onClick={scrollToTop} className="flex items-center hover:text-blue-800">
+                  <IoMdBusiness className="text-2xl mr-1" />
+                  <span>Corporate</span>
+                </Link>
+              </li>
+
+
+
               <li>
                 <Link to="contactus" className="flex items-center hover:text-blue-800">
-                  <IoIosContact className="text-2xl mr-1" />
+                  < IoMdMail className="text-2xl mr-1" />
                   <span>Contact Us</span>
                 </Link>
               </li>
@@ -96,9 +116,26 @@ const Navbar = () => {
                 <span>About</span>
               </Link>
             </li>
+
+
+            <li>
+              <Link to="/personal" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
+                <IoIosPerson className="text-2xl mr-1" />
+                <span>Personal</span>
+              </Link>
+            </li>
+
+
+            <li>
+              <Link to="/corporate" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
+                <IoMdBusiness className="text-2xl mr-1" />
+                <span>Corporate</span>
+              </Link>
+            </li>
+
             <li>
             <Link to="/contactus" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
-                <IoIosContact className="text-2xl mr-1" />
+                < IoMdMail className="text-2xl mr-1" />
                 <span>Contact Us</span>
               </Link>
             </li>

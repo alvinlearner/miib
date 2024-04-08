@@ -2,8 +2,8 @@ import React from "react";
 import Footer from "../footer/Footer";
 import { t1 } from './index'
 import 'animate.css';
-import Medical from './Medical-Insurance.jpg'
- const Aboutpage = () => {
+// import Medical from './Medical-Insurance.jpg'
+ const Corporate = () => {
 
   return(
     <>
@@ -53,4 +53,4 @@ import Medical from './Medical-Insurance.jpg'
  }
 
 
-  export default Aboutpage
+  export default Corporate
