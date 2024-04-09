@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import 'animate.css';
 
+import motor from './assets/motor.jpg'
 import Medical from './Medical-Insurance.jpg'
 import domestic from './assets/domestic.jpg'
 import travel from './assets/travel-insurance.jpg'
 import accident from './assets/accident.jpg'
+
+import { domesticSpeech, personalSpeech } from './data';
 
 function Personal() {
   const [selectedOption, setSelectedOption] = useState('');
@@ -14,6 +17,27 @@ function Personal() {
     setSelectedOption(option);
   };
 
+  // Function to speak content
+
+  const speechClick = () => {
+    const text = domesticSpeech;
+    const value = new SpeechSynthesisUtterance(text);
+  
+    // Stop speaking when the speech content has finished
+    value.onend = () => {
+      console.log('Speech has finished.');
+    };
+  
+    window.speechSynthesis.speak(value);
+  };
+  
+  // Function to stop speaking when clicked
+  const stopSpeech = () => {
+    window.speechSynthesis.cancel();
+  };
+
+
+  
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,7 +63,7 @@ function Personal() {
 
       {/* Text Content */}
       <div className="text-center md:text-left mx-3 animate__animated animate__zoomIn animate__delay-0.5s">
-        <h2 className="text-3xl font-bold mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Domestic Package </h2>
+        <h2 className="text-3xl font-bold mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Domestic Package </h2> <button className='bg-blue-600 rounded-lg' onClick={speechClick}>🎧</button> <button className='bg-red-600  px-1 rounded-lg' onClick={stopSpeech}>◼</button>
         <p className="text-gray-600 mb-6 calligraph">
         <span className="text-blue-600"></span>Domestic Package in insurance, also sometimes referred to as home insurance, is a bundled insurance product designed specifically for your residence. It acts as a safety net against various risks that can affect your home and belongings.
         </p>
@@ -76,10 +100,52 @@ function Personal() {
 
   // Component for Motor
   const Motor = () => (
-    <div>
-      <h2 className='text-2xl font-bold '>BMW</h2>
-      <p>This is information about BMW.</p>
+    <>
+    <section className="py-5 bg-gray-100" id="about">
+
+<div className='bg-white mx-3 py-9'>
+
+
+
+  <div className="container mx-auto px-4 md:px-0"> {/* Added padding for responsiveness */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+
+
+      {/* Text Content */}
+      <div className="text-center md:text-left mx-3 animate__animated animate__zoomIn animate__delay-0.5s">
+        <h2 className="text-3xl font-bold mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Motor Insurance </h2>
+        <p className="text-gray-600 mb-6 calligraph">
+        <span className="text-blue-600"></span>Motor insurance in Kenya is a legal requirement for all vehicle owners. It financially protects you in case of accidents, theft, fire, or other unforeseen events that can damage your car.
+        </p>
+        
+        <p className="text-gray-600 mb-6 calligraph">Here's a breakdown of what personal accident insurance typically covers:</p>
+        
+        
+          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Third Party Only (TPO):</span> This is the most basic and mandatory type of motor insurance in Kenya. It covers your legal liability for injuries and property damage caused to a third party in an accident. However, it does not provide any coverage for your own vehicle.</li>
+          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Third Party, Fire and Theft (TPF&T):</span> This type of insurance builds on TPO by also covering your car in case of fire and theft.</li>
+          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Comprehensive Cover:</span> This is the most extensive type of motor insurance, offering coverage for your vehicle in case of accidental damage, fire, theft, vandalism, and even natural disasters. It also includes TPO benefits.</li>
+
+
+      </div>
+
+            {/* Image */}
+            <div className="md:order-first mx-1 bg-red-500">
+        <img
+          src={motor}
+          alt="Millenium Insurance Brokers"
+          className="w-full h-auto rounded-md shadow-md max-w-full"
+        />
+      </div>
+
+
     </div>
+  </div>
+  </div>
+  
+</section>
+
+   </>
   );
 
 

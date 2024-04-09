@@ -46,12 +46,12 @@ const Navbar = () => {
                   <span>Home</span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/about" onClick={scrollToTop} className="flex items-center hover:text-blue-800">
                   <IoIosInformationCircleOutline className="text-2xl mr-1" />
                   <span>About</span>
                 </Link>
-              </li>
+              </li> */}
 
 
 
@@ -110,12 +110,13 @@ const Navbar = () => {
                 <span>Home</span>
               </Link>
             </li>
-            <li>
+
+            {/* <li>
               <Link to="/about" className="flex items-center mb-4 hover:text-blue-800" onClick={handleCloseMenu}>
                 <IoIosInformationCircleOutline className="text-2xl mr-1" />
                 <span>About</span>
               </Link>
-            </li>
+            </li> */}
 
 
             <li>
