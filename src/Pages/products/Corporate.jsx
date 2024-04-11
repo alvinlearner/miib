@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import 'animate.css';
 
+
+import { Transition } from '@headlessui/react';
+
+
 import motor from './assets/motor.jpg'
 import Medical from './Medical-Insurance.jpg'
 import domestic from './assets/domestic.jpg'
@@ -10,7 +14,7 @@ import accident from './assets/accident.jpg'
 
 import { domesticSpeech, personalSpeech } from './data';
 
-function Corporate() {
+function Personal() {
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleItemClick = (option) => {
@@ -47,7 +51,7 @@ function Corporate() {
 
 
   // Component for Ford content
-  const Domestic = () => (
+  const Medical = () => (
 
     <>
     <section className="py-5 bg-gray-100" id="about">
@@ -99,7 +103,7 @@ function Corporate() {
   );
 
   // Component for Motor
-  const Motor = () => (
+  const Benefits = () => (
     <>
     <section className="py-5 bg-gray-100" id="about">
 
@@ -150,7 +154,7 @@ function Corporate() {
 
 
   // Component for Motor
-  const PersonalAccident = () => (
+  const GroupLife = () => (
     <>
     <section className="py-5 bg-gray-100" id="about">
 
@@ -202,7 +206,7 @@ function Corporate() {
 
 
   // Component for Travel Insurance
-  const TravelInsurance = () => (
+  const WorkInjury = () => (
     <>
     <section className="py-5 bg-gray-100" id="about">
 
@@ -255,16 +259,18 @@ function Corporate() {
   // Render content based on selected option
   const renderContent = () => {
     switch (selectedOption) {
-      case 'domestic':
-        return <Domestic />;
-      case 'motor':
-        return <Motor />;
-      case 'personal-accident':
-        return <PersonalAccident />;
-      case 'travel':
-        return <TravelInsurance/>;
+      case 'medical':
+        return <Medical />;
+      case 'benefits':
+        return <Benefits />;
+      case 'group-life':
+        return <GroupLife />;
+      case 'work-injury':
+        return <WorkInjury/>;
+      // case 'group-personal-accident':
+      //   return <GroupPersonalAccident/>;
       default:
-        return <Domestic />; // Render nothing by default
+        return <Medical />; // Render nothing by default
     }
 }
 
@@ -284,6 +290,38 @@ function Corporate() {
                     <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('motor')}>Motor Insurance</li>
                     <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('personal-accident')}>Personal Accident</li>
                     <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('travel')}>Travel Insurance</li>
+                    
+                    <div className="relative">
+
+                    <button className=' px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-400' onClick={() => setIsOpen(!isOpen)}>View more</button>
+
+                    <Transition
+                    show={isOpen}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    {(ref) => (
+                      <div
+                        ref={ref}
+                        className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        role="menu"
+                        aria-orientation="vertical"
+                        aria-labelledby="options-menu"
+                      >
+                        <div className="py-1" role="none">
+                          {/* Dropdown items */}
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Option 1</a>
+                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Option 2</a>
+                        </div>
+                      </div>
+                    )}
+                  </Transition>
+                  </div>
+
               </ul>
               </div>
             </div>
@@ -332,6 +370,39 @@ function Corporate() {
             <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => handleItemClick('motor')}>Motor Insurance</li>
             <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => handleItemClick('personal-accident')}>Personal Accident</li>
             <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => handleItemClick('travel')}>Travel Insurance</li>
+            <li  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(!isOpen)}>View more</li>
+            
+            <div className="relative">
+
+{/* <button className=' px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-400' onClick={() => setIsOpen(!isOpen)}>View more</button> */}
+
+<Transition
+show={isOpen}
+enter="transition ease-out duration-100"
+enterFrom="transform opacity-0 scale-95"
+enterTo="transform opacity-100 scale-100"
+leave="transition ease-in duration-75"
+leaveFrom="transform opacity-100 scale-100"
+leaveTo="transform opacity-0 scale-95"
+>
+{(ref) => (
+  <div
+    ref={ref}
+    className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby="options-menu"
+  >
+    <div className="py-1" role="none">
+      {/* Dropdown items */}
+      <li  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" onClick={() => handleItemClick('domestic')}>Domestic Package</li>
+      <li  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" onClick={() => handleItemClick('motor')}>Motor Insurance</li>
+    </div>
+  </div>
+)}
+</Transition>
+</div>
+
           </div>
         </div>
       )}
@@ -348,6 +419,6 @@ function Corporate() {
   );
 }
 
-export default Corporate;
+export default Personal;
 
 
