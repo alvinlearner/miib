@@ -63,7 +63,10 @@ function Personal() {
 
       {/* Text Content */}
       <div className="text-center md:text-left mx-3 animate__animated animate__zoomIn animate__delay-0.5s">
-        <h2 className="text-3xl font-bold mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Domestic Package </h2> <button className='bg-blue-600 rounded-lg' onClick={speechClick}>🎧</button> <button className='bg-red-600  px-1 rounded-lg' onClick={stopSpeech}>◼</button>
+        <h2 className="text-3xl font-bold  mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Domestic Package </h2> 
+        
+        {/* <button className='bg-blue-600 rounded-lg' onClick={speechClick}>🎧</button> <button className='bg-red-600  px-1 rounded-lg' onClick={stopSpeech}>◼</button> */}
+        
         <p className="text-gray-600 mb-6 calligraph">
         <span className="text-blue-600"></span>Domestic Package in insurance, also sometimes referred to as home insurance, is a bundled insurance product designed specifically for your residence. It acts as a safety net against various risks that can affect your home and belongings.
         </p>

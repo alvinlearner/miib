@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import 'animate.css';
 
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
-import { Transition } from '@headlessui/react';
+import { Menu,Transition } from '@headlessui/react';
 
 
 import motor from './assets/motor.jpg'
@@ -286,14 +287,14 @@ function Personal() {
             <div className="hidden md:block">
               <div>
                 <ul className='decoration-none ml-10 flex items-baseline space-x-4'>
-                    <li href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('domestic')}>Domestic Package</li>
-                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('motor')}>Motor Insurance</li>
-                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('personal-accident')}>Personal Accident</li>
-                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('travel')}>Travel Insurance</li>
+                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('medical')}>Medical Insurance</li>
+                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('benefits')}>Benefits</li>
+                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('group-life')}>group-life</li>
+                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('work-injury')}>work-injury</li>
                     
                     <div className="relative">
 
-                    <button className=' px-2 py-1 bg-red-600 text-white rounded-md hover:bg-red-400' onClick={() => setIsOpen(!isOpen)}>View more</button>
+                    <button className=' inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50' onClick={() => setIsOpen(!isOpen)}>View more</button>
 
                     <Transition
                     show={isOpen}
@@ -314,8 +315,8 @@ function Personal() {
                       >
                         <div className="py-1" role="none">
                           {/* Dropdown items */}
-                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Option 1</a>
-                          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Option 2</a>
+                          <li className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" onClick={() => handleItemClick('group-life')} >Group Personal Accident for Staff & Board Members</li>
+                          <li  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" onClick={() => handleItemClick('group-life')}>Work Injury Benefits (WIBA)</li>
                         </div>
                       </div>
                     )}

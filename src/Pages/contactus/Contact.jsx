@@ -69,7 +69,7 @@ export default function ContactUs() {
       <div >
           <h1 className="text-4xl bold text-blue-500 text-center ">Reach out to us today.</h1>
           <img src={phone} alt="" style={dropShadowStyle} />
-          <p className="text-xl">We'd love to hear from you! Have a question or want to chat? Drop us a line and we'll get in touch soon.</p>
+          <p className="text-xl">Ready to secure your peace of mind? Send us a message or request a personalized quote through our contact form.</p>
       </div>
 
 
