@@ -28,7 +28,7 @@ export default function ContactUs() {
 
     setFormStatus("Sending...");
     emailjs
-      .sendForm('service_tfsl5g', 'template_afwt2gft', form.current, '5_mhEEZgXYyxuiO_F')
+      .sendForm('service_we1ey0r', 'template_kdg0f0t', form.current, '24gr5EvzTBeRI5BVG')
       .then(
         (result) => {
           console.log(result.text);
