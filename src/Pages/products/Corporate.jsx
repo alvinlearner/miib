@@ -8,7 +8,7 @@ import { Menu,Transition } from '@headlessui/react';
 
 
 import motor from './assets/motor.jpg'
-import Medical from './Medical-Insurance.jpg'
+import medical from './assets/Medical.jpg'
 import domestic from './assets/domestic.jpg'
 import travel from './assets/travel-insurance.jpg'
 import accident from './assets/accident.jpg'
@@ -55,7 +55,8 @@ function Personal() {
   const Medical = () => (
 
     <>
-    <section className="py-5 bg-gray-100" id="about">
+      <section className="py-5 bg-gray-100" id="about">
+
 
 <div className='bg-white mx-3 py-9'>
 
@@ -68,25 +69,46 @@ function Personal() {
 
       {/* Text Content */}
       <div className="text-center md:text-left mx-3 animate__animated animate__zoomIn animate__delay-0.5s">
-        <h2 className="text-3xl font-bold mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Domestic Package </h2> <button className='bg-blue-600 rounded-lg' onClick={speechClick}>🎧</button> <button className='bg-red-600  px-1 rounded-lg' onClick={stopSpeech}>◼</button>
+        <h2 className="text-3xl font-bold mb-4 text-blue-600 text-decoration-color-yellow underline underline-offset-2 text-center">Medical Insurance </h2>
         <p className="text-gray-600 mb-6 calligraph">
-        <span className="text-blue-600"></span>Domestic Package in insurance, also sometimes referred to as home insurance, is a bundled insurance product designed specifically for your residence. It acts as a safety net against various risks that can affect your home and belongings.
+        Health insurance is not a luxury; it's a necessity. There are many other things you should go without before you choose to go without health insurance.
         </p>
-        
-        <p className="text-gray-600 mb-6 calligraph">Typically, a Domestic Package will include coverage for the following:</p>
-        
-        
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Building:</span> This covers the structure of your house itself in case of accidental damage or loss from events like fire, lightning, explosions, storms, or even acts of vandalism.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Contents:</span> This protects the things inside your home, like furniture, appliances, electronics, and clothing, in case they are damaged or stolen.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Liability:</span> This covers you in case someone gets injured or their property is damaged at your residence, and you are found legally liable.</li>
-       
+        <p className="text-gray-600 mb-6 calligraph">
+        If you want insurance but feel unsure about what coverage works for you, there are some questions we can help you answer.
+        </p>
+
+<ul className="flex flex-col gap-2 calligraph mb-6">
+  <li className="flex items-center ">
+    <span className="bullet mr-2">•</span>
+    How's your health? How often do you go to the doctor?
+  </li>
+  <li className="flex items-center">
+    <span className="bullet mr-2">•</span>
+    What current options do you have?
+  </li>
+  <li className="flex items-center">
+    <span className="bullet mr-2">•</span>
+    What are your priorities?
+  </li>
+  <li className="flex items-center">
+    <span className="bullet mr-2">•</span>
+    What are your coverage needs?
+  </li>
+  <li className="flex items-center">
+    <span className="bullet mr-2">•</span>
+    Have you gotten an expert opinion?
+  </li>
+</ul>
+
+    
+    <p className="text-gray-600 calligraph">Talk to us and get a free quote.</p>
 
       </div>
 
             {/* Image */}
             <div className="md:order-first mx-1">
         <img
-          src={domestic}
+          src= {medical} 
           alt="Millenium Insurance Brokers"
           className="w-full h-auto rounded-md shadow-md max-w-full"
         />
@@ -98,7 +120,6 @@ function Personal() {
   </div>
   
 </section>
-
    </>
 
   );
@@ -288,9 +309,7 @@ function Personal() {
               <div>
                 <ul className='decoration-none ml-10 flex items-baseline space-x-4'>
                     <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('medical')}>Medical Insurance</li>
-                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('benefits')}>Benefits</li>
-                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('group-life')}>group-life</li>
-                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('work-injury')}>work-injury</li>
+                    <li className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => handleItemClick('benefits')}>Employee Benefits</li>
                     
                     <div className="relative">
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Footer from '../../components/footer/Footer';
 import 'animate.css';
-
+import './img.css'
 import motor from './assets/motor.jpg'
 import Medical from './Medical-Insurance.jpg'
 import domestic from './assets/domestic.jpg'
@@ -74,9 +74,9 @@ function Personal() {
         <p className="text-gray-600 mb-6 calligraph">Typically, a Domestic Package will include coverage for the following:</p>
         
         
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Building:</span> This covers the structure of your house itself in case of accidental damage or loss from events like fire, lightning, explosions, storms, or even acts of vandalism.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Contents:</span> This protects the things inside your home, like furniture, appliances, electronics, and clothing, in case they are damaged or stolen.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Liability:</span> This covers you in case someone gets injured or their property is damaged at your residence, and you are found legally liable.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Building:</span> This covers the structure of your house itself in case of accidental damage or loss from events like fire, lightning, explosions, storms, or even acts of vandalism.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Contents:</span> This protects the things inside your home, like furniture, appliances, electronics, and clothing, in case they are damaged or stolen.</li>
+          <li className="text-gray-600 calligraph"> <span className='text-blue-600 text-xl'>Liability:</span> This covers you in case someone gets injured or their property is damaged at your residence, and you are found legally liable.</li>
        
 
       </div>
@@ -86,7 +86,8 @@ function Personal() {
         <img
           src={domestic}
           alt="Millenium Insurance Brokers"
-          className="w-full h-auto rounded-md shadow-md max-w-full"
+          className="w-full h-auto rounded-md shadow-md max-w-full responsive "
+          style={{width:'90%', height:'80%'}}
         />
       </div>
 
@@ -125,9 +126,9 @@ function Personal() {
         <p className="text-gray-600 mb-6 calligraph">Here's a breakdown of what personal accident insurance typically covers:</p>
         
         
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Third Party Only (TPO):</span> This is the most basic and mandatory type of motor insurance in Kenya. It covers your legal liability for injuries and property damage caused to a third party in an accident. However, it does not provide any coverage for your own vehicle.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Third Party, Fire and Theft (TPF&T):</span> This type of insurance builds on TPO by also covering your car in case of fire and theft.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Comprehensive Cover:</span> This is the most extensive type of motor insurance, offering coverage for your vehicle in case of accidental damage, fire, theft, vandalism, and even natural disasters. It also includes TPO benefits.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Third Party Only (TPO):</span> This is the most basic and mandatory type of motor insurance in Kenya. It covers your legal liability for injuries and property damage caused to a third party in an accident. However, it does not provide any coverage for your own vehicle.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Third Party, Fire and Theft (TPF&T):</span> This type of insurance builds on TPO by also covering your car in case of fire and theft.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Comprehensive Cover:</span> This is the most extensive type of motor insurance, offering coverage for your vehicle in case of accidental damage, fire, theft, vandalism, and even natural disasters. It also includes TPO benefits.</li>
 
 
       </div>
@@ -176,10 +177,10 @@ function Personal() {
         <p className="text-gray-600 mb-6 calligraph">Here's a breakdown of what personal accident insurance typically covers:</p>
         
         
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Accidental Death Benefit:</span>  If you pass away due to an accident, the policy pays a pre-determined amount to your beneficiaries.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Permanent Total Disability Benefit:</span> If an accident leaves you permanently disabled and unable to work, you receive a payout according to the policy terms.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Temporary Total Disability Benefit:</span> You might be compensated for loss of income if an accident temporarily prevents you from working for a certain period.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Medical Expenses:</span> Some PA policies may cover medical costs associated with the accident, but this is not always included, so be sure to check the details.</li>
+          <li className="text-gray-600 calligraph"> <span className='text-blue-600 text-xl'>Accidental Death Benefit:</span>  If you pass away due to an accident, the policy pays a pre-determined amount to your beneficiaries.</li>
+          <li className="text-gray-600 calligraph"> <span className='text-blue-600 text-xl'>Permanent Total Disability Benefit:</span> If an accident leaves you permanently disabled and unable to work, you receive a payout according to the policy terms.</li>
+          <li className="text-gray-600 calligraph"> <span className='text-blue-600 text-xl'>Temporary Total Disability Benefit:</span> You might be compensated for loss of income if an accident temporarily prevents you from working for a certain period.</li>
+          <li className="text-gray-600 calligraph"> <span className='text-blue-600 text-xl'>Medical Expenses:</span> Some PA policies may cover medical costs associated with the accident, but this is not always included, so be sure to check the details.</li>
 
 
       </div>
@@ -228,10 +229,10 @@ function Personal() {
         <p className="text-gray-600 mb-6 calligraph">Here are some of the things travel insurance can cover:</p>
         
         
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Medical expenses:</span> If you get sick or injured while traveling, travel insurance can help cover the costs of medical treatment, including hospitalization and repatriation (getting you back home). This is especially important because most regular health insurance plans don't provide full coverage abroad.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Trip cancellation:</span> If you have to cancel your trip for a covered reason, such as illness, injury, or a natural disaster, travel insurance can reimburse you for your non-refundable travel costs, like flights and accommodation.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Travel delays:</span> If your flight or other transportation is delayed, travel insurance may cover your additional expenses, like meals or accommodation.</li>
-          <li className="text-gray-600 mb-6 calligraph"> <span className='text-blue-600 text-xl'>Lost luggage:</span> If your luggage is lost or stolen, travel insurance can help you recoup the value of your belongings.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Medical expenses:</span> If you get sick or injured while traveling, travel insurance can help cover the costs of medical treatment, including hospitalization and repatriation (getting you back home). This is especially important because most regular health insurance plans don't provide full coverage abroad.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Trip cancellation:</span> If you have to cancel your trip for a covered reason, such as illness, injury, or a natural disaster, travel insurance can reimburse you for your non-refundable travel costs, like flights and accommodation.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Travel delays:</span> If your flight or other transportation is delayed, travel insurance may cover your additional expenses, like meals or accommodation.</li>
+          <li className="text-gray-600  calligraph"> <span className='text-blue-600 text-xl'>Lost luggage:</span> If your luggage is lost or stolen, travel insurance can help you recoup the value of your belongings.</li>
        
 
       </div>

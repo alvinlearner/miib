@@ -7,8 +7,9 @@ import Aboutpage from './components/about/Aboutpage';
 import ContactUs from './Pages/contactus/Contact';
 import Faqs from './Pages/faqs/Faqs';
 import Personal from './Pages/products/Personal';
-import Corporate from './Pages/products/Corporate';
+// import Corporate from './Pages/products/Corporate';
 import Navbar2 from './components/Navbar/Navbar2';
+import CorporateTwo from './Pages/products/corporate/Corporate2';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
     <Route path="/about" element={<Aboutpage />} />
     <Route path="/faqs" element={<Faqs />} /> 
     <Route path="/personal" element={<Personal />} />
-    <Route path="/corporate" element={<Corporate />} />
+    <Route path="/corporate" element={<CorporateTwo />} />
     </Routes>
     {/* <Footer/> */}
 
