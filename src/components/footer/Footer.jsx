@@ -116,25 +116,25 @@ const navigate = useNavigate()
 
 
             <li className="mb-2">
-              <Link to="/suites" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
+              <Link to="/corporate" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Domestic Package
                 </Link>        
             </li>
 
             <li className="mb-2">
-              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
+              <Link to="/personal" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Motor Insurance
                 </Link>          
             </li>
 
             <li className="mb-2">
-              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
+              <Link to="/personal" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Personal Accident
                 </Link>           
             </li>
 
             <li className="mb-2">
-              <Link to="/about" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
+              <Link to="/corporate" className="text-md text-black hover:text-blue-800" onClick={scrollToTop}>
               Travel Insurance
                 </Link>    
             </li>
