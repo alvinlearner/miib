@@ -16,7 +16,6 @@ const ContactFooter = () => {
     });
   };
 
-const navigate = useNavigate()
 
 
 
