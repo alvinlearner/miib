@@ -48,7 +48,7 @@ const MainHeroSection = () => {
         <p className="subheadline ">
         Protecting what matters most.
         Explore our insurance solutions for peace of mind and financial security. Get a quote and start securing your future today.</p>
-        <a onClick={() => navigate('/suites')} className="btn-book-now" style={{cursor:'pointer'}}>
+        <a onClick={() => navigate('/contactus')} className="btn-book-now" style={{cursor:'pointer'}}>
           Explore
         </a>
       </div>
