@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Logo from './logo2.png'
 import { IoIosHome,  IoMdMail, IoMdBusiness, IoIosInformationCircleOutline, IoIosPerson } from 'react-icons/io';
 import './navbar.css'
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,6 +26,8 @@ const Navbar = () => {
     });
   };
 
+  const navigate = useNavigate()
+
   return (
     <div className="navbar-container">
       <div className={`w-full h-[44px] bg-transparent shadow-sm ${toggle ? 'overflow-hidden' : ''}`}>
@@ -37,10 +40,10 @@ const Navbar = () => {
         )}
 
         <div className='p-4 md:max-w-[1080px] max-w-[400px] m-auto w-full h-full flex justify-between items-center'>
-        <Link to="/" onClick={scrollToTop} className="flex items-center hover:text-blue-800">
+        
+        
+          <img src={Logo} alt="Millenuim Insurance Brokers" style={{width:"3%"}} onClick={() => navigate('/contactus')} />
 
-          <img src={Logo} alt="Millenuim Insurance Brokers" style={{width:"3%"}} />
-          </Link>
           <div className='flex items-center'>
             <ul className='hidden md:flex gap-9 '>
               <li>
