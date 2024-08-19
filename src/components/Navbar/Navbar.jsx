@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className='p-4 md:max-w-[1080px] max-w-[400px] m-auto w-full h-full flex justify-between items-center'>
         
         
-          <img src={Logo} alt="Millenuim Insurance Brokers" style={{width:"3%"}} onClick={() => navigate('/contactus')} />
+          <img src={Logo} alt="Millenuim Insurance Brokers" style={{width:"3%"}} onClick={() => navigate('/')} />
 
           <div className='flex items-center'>
             <ul className='hidden md:flex gap-9 '>
