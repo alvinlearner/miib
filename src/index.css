@@ -18,6 +18,23 @@ body,
     font-family: "Poppins",sans-serif;
     /* font-family: 'Josefin Sans', cursive; */
 }
+
+
+/* * {
+    outline: 1px solid red;
+  } */
+  
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+
+
+
+
 /* 
 .input-box-shadow{
     filter: drop-shadow(-4px -4px 44px rgba(0,0,0,0.08));
