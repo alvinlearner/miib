@@ -140,7 +140,7 @@ const navigate = useNavigate()
             </li>
 
             <li className="mb-2">
-              <a href="#contact" className="text-md text-black hover:text-blue-800">
+              <a href="/" className="text-md text-black hover:text-blue-800">
               Other Products
               </a>
             </li>

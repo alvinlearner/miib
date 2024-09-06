@@ -62,8 +62,8 @@ const ContactFooter = () => {
             </li>
             <li className="mb-2">
               <a className="text-md text-black hover:text-blue-800">
-              <Link to="/suites" onClick={scrollToTop}>
-                Products
+              <Link to="/about" onClick={scrollToTop}>
+                About
                 </Link>
               </a>
               
@@ -77,7 +77,7 @@ const ContactFooter = () => {
               
             </li>
             <li className="mb-2">
-              <a href="#contact" className="text-md text-black hover:text-blue-800">
+              <a href="/contactus" className="text-md text-black hover:text-blue-800">
                 Contact
               </a>
             </li>
