@@ -33,6 +33,8 @@ const MainHeroSection = () => {
   return (
     <>
 
+    <div className="container mx-auto py-7 md:px-0 bg-gray-100 overflow-x-hidden">
+
     <div  id="hero">
       <Slider {...carouselSettings}>
         {carouselImages.map((image, index) => (
@@ -55,6 +57,7 @@ const MainHeroSection = () => {
 
 
 
+    </div>
     </div>
     </>
   );

@@ -8,10 +8,10 @@ import Footer from './components/footer/Footer'
 function Landing() {
 
   return (
-    <div className="app">
+    <div >
         <MainHeroSection/>
         <PricingSection/>
-       <AboutUsSection/>
+       {/* <AboutUsSection/> */}
         <Footer/> 
     </div>
   )
